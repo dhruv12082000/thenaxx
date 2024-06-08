@@ -1,0 +1,313 @@
+  
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+  }
+  header {
+    background-color: #ca3e3e;
+    padding: 20px;
+    text-align: center;
+  }
+  h1{
+    font-size: 80px;
+    color: #fff;
+  }
+  p{
+    text-align: justify;
+  }
+  h2{
+    text-align: center;
+  }
+  nav {
+    padding: 10px;
+    text-align: right;
+  }
+  nav a {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px;
+  }
+  nav a:hover {
+    background-color: #b3a7a7;
+    color: #000000;
+  }
+  section {
+    padding: 20px;
+  }
+  footer {
+    background-color: #171414;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  img {
+    display: block;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+  
+  .img_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .top_img {
+    position: relative;
+  }
+  
+  .top_img img {
+    position: absolute;
+    z-index: -1;
+    animation: fade-out linear forwards;
+    animation-timeline: view();
+    animation-range: exit;
+    top: 0px;
+  }
+  
+  .img_container.top_img {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .main-section {
+    padding: 70px 0;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .try{
+    display: flex;
+    align-items: center;
+  }
+  @keyframes fade-out {
+    100% { opacity: 0; scale: 1.5; }
+  } 
+  
+  .img_container {
+    width: 100%;
+    height: 70vh;
+  }
+  
+  .img_container img,
+  .tWrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  section .tWrap {
+    perspective: 1000px;
+  }
+  
+  .box {
+    animation: noTransformAnim linear forwards normal;
+    animation-timeline: view();
+    transform: rotateX(40deg);
+    opacity: 0;
+  }
+  
+  @keyframes noTransformAnim {
+    50% { transform: none; opacity: 1; }
+    100% { transform: none; opacity: 1; }
+  }
+
+  .content_wrapper{
+    padding: 5%;
+  }
+
+  img.types{
+    height: 100%;
+    width: 100%;
+  }
+
+  #cal_calculator {
+    padding: 20px;
+    border-radius: 8px;
+    width: auto;
+    max-width: 400px; /* Set a max-width for larger screens */
+    margin: 20px auto; /* Center align the calculator */
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  }
+  
+  #cal_calculator h2 {
+    color: #333; /* Dark gray color for the heading */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #cal_calculator label {
+    display: block; /* Makes each label take its own line */
+    margin: 10px 0 5px; /* Space between label and input */
+    color: #666; /* Medium gray for text */
+    font-size: 14px; /* Slightly larger font size for readability */
+  }
+  
+  #cal_calculator input[type="number"],
+  #cal_calculator select {
+    width: 100%; /* Full width */
+    padding: 8px; /* Padding for easier interaction */
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+  }
+  
+  #cal_calculator button {
+    width: 100%;
+    padding: 10px;
+    background-color: #bed3d7; /* Green background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 20px; /* Space above the button */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  #cal_calculator button:hover {
+    background-color: #4597a0; /* Darker green on hover */
+  }
+  
+  #cal_calculator p {
+    margin-top: 15px; /* Space above the result paragraph */
+    color: #333; /* Dark color for visibility */
+    font-size: 16px; /* Larger font size for the result */
+    text-align: center; /* Center-align the text */
+  }
+  /* Responsive styles */  
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .header h1 {
+      font-size: 24px;
+    }
+    nav a {
+        /* display: block; */
+        margin: 10px 0;
+        text-align: center;
+      }
+    .try{
+      display: block;
+      flex-wrap: wrap;
+    }
+    .img_container {
+      height: auto;
+      width: 100%;
+    }
+  }   
+  
+  #contact_thenaxx {
+    text-align: center;
+  }
+    
+  #membershipForm {
+    background-color: rgba(41, 89, 171, 0.521);
+    display: inline-block;
+    width: 60%;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin: 0 auto;
+  }
+  
+  #membershipForm input[type="text"],
+  #membershipForm input[type="email"],
+  #membershipForm input[type="tel"],
+  #membershipForm select,
+  #membershipForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  #membershipForm button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #0015fb;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  #membershipForm button[type="submit"]:hover {
+    background-color: #1220bd;
+  }
+  
+  #membershipForm label {
+    color: #000000;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+  }
+  
+  #membershipForm input[type="radio"] {
+    margin: 0 10px 0 0;
+  }
+  
+  #membershipForm input[type="checkbox"] {
+    margin: 0 10px 0 0;
+  }
+  /* Responsive styles for phone screens */
+@media only screen and (max-width: 480px) {
+  .top_img {
+    height: 60vh;
+  }
+  .main-section {
+    width: 100%;
+    padding: 50px 0;
+  }
+  nav a {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+  }
+  .try {
+    flex-wrap: wrap;
+  }
+  .content_wrapper {
+    width: 100%;
+  }
+  #cal_calculator {
+    width: 100%;
+    max-width: none;
+  }
+  #membershipForm {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* Responsive styles for tablet screens */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .top_img {
+    height: 100vh;
+  }
+  .main-section {
+    width: 100%;
+    padding: 50px 0;
+  }
+  .try {
+    flex-wrap: wrap;
+  }
+  .content_wrapper {
+    width: 48%;
+  }
+  #cal_calculator {
+    width: 100%;
+    max-width: none;
+  }
+  #membershipForm {
+    width: 100%;
+    max-width: none;
+  }
+}
